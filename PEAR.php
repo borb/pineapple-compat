@@ -1,3 +1,8 @@
 <?php
-use Mayden\Pineapple\Util as PEAR;
-use Mayden\Pineapple\Error as PEAR_Error;
+class PEAR extends \Mayden\Pineapple\Util
+{
+}
+
+class PEAR_Error extends \Mayden\Pineapple\Error
+{
+}

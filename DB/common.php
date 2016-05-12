@@ -1,2 +1,4 @@
 <?php
-use Mayden\Pineapple\DB\Driver\Common as DB_common;
+class DB_common extends \Mayden\Pineapple\DB\Driver\Common
+{
+}

@@ -1,2 +1,4 @@
 <?php
-use Mayden\Pineapple\DB\Driver\DoctrineDbal.php as DB_doctrinedbal;
+class DB_doctrinedbal extends Mayden\Pineapple\DB\Driver\DoctrineDbal
+{
+}

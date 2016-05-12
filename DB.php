@@ -1,5 +1,16 @@
 <?
-use Mayden\Pineapple\DB as DB;
-use Mayden\Pineapple\DB\Error as DB_Error;
-use Mayden\Pineapple\DB\Result as DB_result;
-use Mayden\Pineapple\DB\Row as DB_row;
+class DB extends \Mayden\Pineapple\DB
+{
+}
+
+class DB_Error extends \Mayden\Pineapple\DB\Error
+{
+}
+
+class DB_result extends \Mayden\Pineapple\DB\Result
+{
+}
+
+class DB_row extends \Mayden\Pineapple\DB\Row
+{
+}
