@@ -1,5 +1,5 @@
 {
-    "name": "borb/pear-db-compat",
+    "name": "borb/pineapple-compat",
     "description": "Stub classes to map to refactored Pineapple classes",
     "type": "library",
     "require": {
