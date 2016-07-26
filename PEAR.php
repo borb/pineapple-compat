@@ -1,5 +1,7 @@
 <?php
 use Mayden\Pineapple\Util as PineappleUtil;
+use Mayden\Pineapple\Error as PineappleError;
+use Mayden\Pineapple\Exception as PineappleException;
 
 // @todo This should probably be removed, it's really not useful
 @ini_set('track_errors', true);
@@ -19,7 +21,7 @@ define('PEAR_ERROR_CALLBACK', PineappleUtil::PEAR_ERROR_CALLBACK);
  */
 define('PEAR_ERROR_EXCEPTION', PineappleUtil::PEAR_ERROR_EXCEPTION);
 
-class PEAR extends \Mayden\Pineapple\Util
+class PEAR extends PineappleUtil
 {
     /**
      * Only here for backwards compatibility.
@@ -51,7 +53,7 @@ class PEAR extends \Mayden\Pineapple\Util
     }
 }
 
-class PEAR_Error extends \Mayden\Pineapple\Error
+class PEAR_Error extends PineappleError
 {
     /**
      * Only here for backwards compatibility.
@@ -72,6 +74,6 @@ class PEAR_Error extends \Mayden\Pineapple\Error
     }
 }
 
-class PEAR_Exception extends \Mayden\Pineapple\Exception
+class PEAR_Exception extends PineappleException
 {
 }
