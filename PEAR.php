@@ -3,9 +3,6 @@ use Mayden\Pineapple\Util as PineappleUtil;
 use Mayden\Pineapple\Error as PineappleError;
 use Mayden\Pineapple\Exception as PineappleException;
 
-// @todo This should probably be removed, it's really not useful
-@ini_set('track_errors', true);
-
 /**
  * ERROR constants
  */
