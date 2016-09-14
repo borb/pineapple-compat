@@ -32,4 +32,20 @@ class DB_common extends \Mayden\Pineapple\DB\Driver\Common
         }
         return $string;
     }
+
+    /**
+     * DEPRECATED: Quotes a string so it can be safely used in a query
+     *
+     * @param string $string  the string to quote
+     *
+     * @return string  the quoted string or the string <samp>NULL</samp>
+     *                  if the value submitted is <kbd>null</kbd>.
+     *
+     * @see Common::quoteSmart(), Common::escapeSimple()
+     * @deprecated Deprecated in release 1.6.0
+     */
+    public function quote($string = null)
+    {
+        return $this->quoteSmart($string);
+    }
 }
