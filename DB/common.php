@@ -48,4 +48,16 @@ class DB_common extends \Mayden\Pineapple\DB\Driver\Common
     {
         return $this->quoteSmart($string);
     }
+
+    /**
+     * Lists the tables in the current database
+     *
+     * @return array  the list of tables.  A DB_Error object on failure.
+     *
+     * @deprecated Method deprecated some time before Release 1.2
+     */
+    public function getTables()
+    {
+        return $this->getListOf('tables');
+    }
 }
