@@ -3,7 +3,7 @@
     "description": "Stub classes to map to refactored Pineapple classes",
     "type": "library",
     "require": {
-        "wethersherbs/pineapple": "dev-deeper-refactor"
+        "wethersherbs/pineapple": "^0.2.0"
     },
     "autoload": {
         "psr-0": {
