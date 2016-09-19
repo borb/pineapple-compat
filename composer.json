@@ -1,9 +1,9 @@
 {
-    "name": "borb/pineapple-compat",
+    "name": "wethersherbs/pineapple-compat",
     "description": "Stub classes to map to refactored Pineapple classes",
     "type": "library",
     "require": {
-        "borb/pear-db-dbal": "dev-master"
+        "wethersherbs/pineapple": "dev-deeper-refactor"
     },
     "autoload": {
         "psr-0": {
