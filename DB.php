@@ -61,6 +61,10 @@ define('DB_GETMODE_FLIPPED', PineappleDB::DB_FETCHMODE_FLIPPED);
 
 class DB extends PineappleDB
 {
+    public static function isManip($query)
+    {
+        return DB_common::isManip($query);
+    }
 }
 
 class DB_Error extends PineappleDB\Error
