@@ -58,9 +58,15 @@ define('DB_PORTABILITY_ALL', PineappleDB::DB_PORTABILITY_ALL);
 define('DB_GETMODE_ORDERED', PineappleDB::DB_FETCHMODE_ORDERED);
 define('DB_GETMODE_ASSOC', PineappleDB::DB_FETCHMODE_ASSOC);
 define('DB_GETMODE_FLIPPED', PineappleDB::DB_FETCHMODE_FLIPPED);
+define('DB_ERROR_POSSIBLE_UNINTENDED_CONSEQUENCES', PineappleDB::DB_ERROR_POSSIBLE_UNINTENDED_CONSEQUENCES);
+define('DB_ERROR_ACTIVE_TRANSACTIONS', PineappleDB::DB_ERROR_ACTIVE_TRANSACTIONS);
 
 class DB extends PineappleDB
 {
+    public static function isManip($query)
+    {
+        return DB_common::isManip($query);
+    }
 }
 
 class DB_Error extends PineappleDB\Error

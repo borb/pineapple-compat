@@ -1,5 +1,8 @@
 <?php
-class DB_doctrinedbal extends Mayden\Pineapple\DB\Driver\DoctrineDbal
+
+use Pineapple\DB;
+
+class DB_pdodriver extends Mayden\Pineapple\DB\Driver\PdoDriver
 {
     use DB_Components_DeprecatedCommonMethods;
     use DB_Components_DeprecatedPdoAlikeDriverMethods;

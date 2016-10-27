@@ -1,63 +1,20 @@
 <?php
 class DB_common extends \Mayden\Pineapple\DB\Driver\Common
 {
-    /**
-     * DEPRECATED:  String conversion method
-     *
-     * @return string  a string describing the current PEAR DB object
-     *
-     * @deprecated Method deprecated in Release 1.7.0
-     */
-    public function toSleep()
-    {
-        return $this->__toSleep();
-    }
+    // eww, psr-0 class name
+    use DB_Components_DeprecatedCommonMethods;
 
     /**
-     * DEPRECATED: Quotes a string so it can be safely used within string
-     * delimiters in a query
+     * NOTA BENE: this is here because some code refers to DB_common DIRECTLY
+     * and without significant hacks we cannot force a pineapple driver to
+     * extend this class and not the main-repository Pineapple\DB\Common
+     * class.
      *
-     * @param string $string  the string to be quoted
+     * Do NOT move methods here from pineapple, put them into a trait and
+     * 'use' them in the driver.
      *
-     * @return string  the quoted string
-     *
-     * @see Common::quoteSmart(), Common::escapeSimple()
-     * @deprecated Method deprecated some time before Release 1.2
+     * this is here ONLY for:
+     * - older drivers which extend DB_common
+     * - access to static methods in Pineapple\DB\Common
      */
-    public function quoteString($string)
-    {
-        $string = $this->quoteSmart($string);
-        if ($string{0} == "'") {
-            return substr($string, 1, -1);
-        }
-        return $string;
-    }
-
-    /**
-     * DEPRECATED: Quotes a string so it can be safely used in a query
-     *
-     * @param string $string  the string to quote
-     *
-     * @return string  the quoted string or the string <samp>NULL</samp>
-     *                  if the value submitted is <kbd>null</kbd>.
-     *
-     * @see Common::quoteSmart(), Common::escapeSimple()
-     * @deprecated Deprecated in release 1.6.0
-     */
-    public function quote($string = null)
-    {
-        return $this->quoteSmart($string);
-    }
-
-    /**
-     * Lists the tables in the current database
-     *
-     * @return array  the list of tables.  A DB_Error object on failure.
-     *
-     * @deprecated Method deprecated some time before Release 1.2
-     */
-    public function getTables()
-    {
-        return $this->getListOf('tables');
-    }
 }
